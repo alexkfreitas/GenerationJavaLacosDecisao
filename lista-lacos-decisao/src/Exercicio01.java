@@ -6,7 +6,7 @@ public class Exercicio01 {
 	
 	public static void main(String[] args) {
 		
-		int n1,n2,n3,maior = 0;
+		int n1,n2,n3;
 		
 		Scanner entrada = new Scanner(System.in);
 		
@@ -19,16 +19,14 @@ public class Exercicio01 {
 		System.out.print("Digite o valor do terceiro número inteiro: ");
 		n3 = entrada.nextInt();
 		
-		if(n1>maior) {
-			maior=n1;
-		} if(n2>n1) {
-			maior=n2;
-		} if(n3>n2) {
-			maior=n3;
+		if(n1>n2 && n1>n3) {
+			System.out.println("O maior número é o: "+n1);
+		} else if(n2>n1 && n2>n3) {
+			System.out.println("O maior número é o: "+n2);
+		} else {
+			System.out.println("O maior número é o: "+n3);
 		}
-		
-		System.out.println("O maior número é o: "+maior);
-		
+			
 		entrada.close();
 		
 	}
